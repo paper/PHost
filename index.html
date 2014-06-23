@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PHost</title>
+  <link rel="icon" type="image/png" href="images/favorite.ico">
+  <link rel="stylesheet" href="css/index.css" />
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="js/index.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<section class="main">
+		
+			<div class="content">
+				<div class="tip hidden" id="J-tip">
+					<p>操作成功</p>
+				</div>
+				
+				<div class="host-main">
+					<textarea id="J-host-area" class="my-scroll" spellcheck="false"></textarea>
+				</div>
+			</div>
+			<!--/content-->
+			
+			<div class="side">
+				<div class="side-hd clearfix">
+					<div class="node-item" data-id="base-host" data-title="Base Host">
+						<a href="javascript:;" id="J-base-host">
+							<span>Base Host</span>
+						</a>
+					</div>
+					
+					<div class="add-host">
+						<a href="javascript:;" id="J-add-host-btn"><span>+</span></a>
+					</div>
+				</div>
+				
+				<div class="side-bd">
+				
+					<div class="node-list my-scroll" id="J-node-list">
+						<ul class="clearfix"></ul>
+					</div>
+					
+				</div>
+				<!--/side-bd-->
+				
+			</div>
+			<!--/side-->
+			
+		</section>
+		<!--/main-->
+  
+    <footer class="clear tc">
+      <div class="copyright">
+        <p> http://github.com/paper </p>
+      </div>
+    </footer>
+    
+    <!--pop-add-host or edit -->
+    <div class="pop pop-add-host hidden" id="J-pop-add-host">
+      <div class="pop-hd">
+        <a href="javascript:;" class="close-btn"><i class="ico ico-close"></i></a>
+      </div>
+      
+      <div class="pop-bd">
+        <div class="pop-content tc">
+          <input autocomplete="off" placeholder="添加新的Host" type="text" id="J-add-host-name" />
+          
+          <div class="btn-wrap">
+            <a href="javascript:;" class="btn"><span>确定</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/pop-add-host-->
+    
+    <!--pop-del-host-->
+    <div class="pop pop-del-host hidden" id="J-pop-del-host">
+      <div class="pop-hd">
+        <a href="javascript:;" class="close-btn"><i class="ico ico-close"></i></a>
+      </div>
+      
+      <div class="pop-bd">
+        <div class="pop-content">
+          <p class="q tc">
+              <span class="ico-wrap"><i class="ico ico-question"></i></span>
+              确定要删除 "<strong></strong>" ?
+          </p>
+
+          <div class="btn-wrap tc">
+            <a href="javascript:;" class="btn btn-cancel"><span>取消</span></a>
+            <a href="javascript:;" class="btn btn-warning"><span>确定</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/pop-del-host-->
+    
+    <div class="lightbox hidden" id="J-lightbox"></div>
+	</div>
+	
+	<div class="test tc mt10">
+		for test : <a href="javascript:localStorage.clear();">clear all data</a>
+	</div>
+</body>
+</html>

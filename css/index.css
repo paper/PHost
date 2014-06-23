@@ -1,0 +1,284 @@
+@charset "utf-8";
+
+/*==================== base =================*/
+
+* {margin:0; padding:0;}
+.clear{clear:both;}
+.clearfix{}
+.clearfix:after{content:"";clear:both;display:table;}
+.tc{text-align:center;}
+body{font:12px/1.5 "Microsoft yahei", verdana}
+html{overflow:hidden;}
+textarea{resize:none;}
+ul,ol,li{list-style:none;}
+img{border:0 none;}
+a{text-decoration:none;}
+a:active,
+.link:active{box-shadow: inset 0 2px 3px rgba(0,0,0,0.2);}
+textarea, input { outline: none; font-family:inherit; }
+.hidden{display:none;}
+.m10{margin:10px;}
+.mt10{margin-top:10px;}
+.ml10{margin-left:10px;}
+.mr10{margin-right:10px;}
+.mb10{margin-bottom:10px;}
+
+/*==================== common =================*/
+
+.my-scroll{overflow:hidden}
+.my-scroll:hover{overflow-x:hidden;overflow-y:auto;}
+.my-scroll::-webkit-scrollbar-track-piece{background-color:#fff;}
+.my-scroll::-webkit-scrollbar{width:2px;}
+.my-scroll::-webkit-scrollbar-thumb{background:#ccc; border-radius:10px;} 
+
+.ico{display:inline-block; background-repeat:no-repeat;}
+.ico-close{width:7px; height:7px; background-image:url(../images/close.png);}
+.ico-edit{width:9px; height:9px; background-image:url(../images/edit.png);}
+.ico-del{width:9px; height:9px; background-image:url(../images/del.png);}
+.ico-question{width:9px; height:12px; background-image:url(../images/question.png);}
+.ico-right{width:10px; height:7px; background-image:url(../images/right.png);}
+
+input[type="text"]{
+  padding:10px;
+  border:1px solid #D7D9D3;
+  width:260px;
+}
+input[type="text"]:focus{
+  border-color:#ACA17F;
+  box-shadow:inset 0 1px 1px rgba(0,0,0,0.2);
+}
+
+.btn{
+  display:inline-block;
+  color:#fff;
+  border-radius:2px;
+  padding:6px 15px 5px;
+  background-color:#ACA17F;
+  letter-spacing:0.1em;
+  text-indent:0.1em;
+  opacity:0.9;
+}
+.btn:hover{opacity:1;}
+.btn-cancel{background-color:#b7af97;}
+.btn-warning{background-color:#1CA3CF;}
+.btn-wrap{padding:20px 0;}
+.btn-wrap a{margin:0 10px;}
+
+.lightbox{
+  position:absolute;
+  background-color:rgba(0,0,0,0.5);
+  left:0;
+  top:0;
+  z-index:100;
+  width:100%;
+  height:100%;
+}
+
+.pop{
+  position:absolute;
+  z-index:200;
+  background-color:#fff;
+  border-radius:3px;
+  width:360px;
+  min-height:100px;
+  left:50%;
+  top:120px;
+  -webkit-transform: translate(-50%, 0);
+  box-shadow:0 0 70px rgba(0,0,0,0.5);
+	word-break: break-all;
+}
+.pop-bd{padding:60px 0 40px;}
+.pop .close-btn{
+  position:absolute;
+  right:4px;
+  top:4px;
+  border-radius:3px;
+  width:18px;
+  height:18px;
+  text-align:center;
+  line-height:18px;
+}
+.pop .close-btn:hover{background-color:#F8F0EF;}
+.pop-shake{-webkit-animation: shake 0.5s;}
+@-webkit-keyframes shake{
+  0 { -webkit-transform: translate(-55%, 0); }
+  20% {-webkit-transform: translate(-45%, 0); }
+  40% {-webkit-transform: translate(-53%, 0); }
+  60% {-webkit-transform: translate(-47%, 0); }
+  80% {-webkit-transform: translate(-51%, 0); }
+  100% {-webkit-transform: translate(-50%, 0); }
+}
+
+.node-item{}
+.node-item a{
+  display:block;
+  position:relative;
+  overflow:hidden;
+  padding:0 10px;
+  height:30px;
+  line-height:30px;
+  background-color:#F9F9F4;
+  color:#83815A;
+}
+.node-item a:hover{background-color:#ecece1;}
+.node-item .node-item-click,
+.node-item .node-item-click:hover{background-color:#dfdfce !important;}
+.node-item .node-item-dblclick,
+.node-item .node-item-dblclick:hover{
+	background-color:#999770 !important;
+	color:#fff !important;
+	cursor:default !important;
+}
+
+
+/*==================== layout =================*/
+
+.wrapper{}
+.main{
+  width:650px;
+  margin:10px auto 0;
+  height:560px;
+  overflow:hidden;
+  border:1px solid #F6E0DE;
+}
+
+.content{
+  float:right;
+  width:349px;
+  height:560px;
+	position:relative;
+  border-left:1px solid #F6E0DE;
+}
+
+.side{
+  float:right;
+  width:300px;
+}
+.copyright{
+  color:#fff;
+}
+
+/*==================== detail =================*/
+.tip{
+	position:absolute;
+	top:0;
+	left:50%;
+	-webkit-transform: translate(-50%, 0);
+	height:30px;
+	line-height:30px;
+	background-color:#B7B479;
+	color:#fff;
+	padding:0 20px;
+	text-align:center;
+	opacity:0.9;
+}
+
+
+.host-main{}
+.host-main textarea{
+  display:block;
+  margin:10px 0 0 0;
+  padding:0 10px 10px;
+  width:319px;
+  height:533px;
+  color:#5F5D5C;
+  border:0 none;
+  word-break:break-all;
+}
+
+.side-hd{
+  padding:10px;
+  border-bottom:1px solid #F6E0DE;
+}
+
+.side-hd .node-item{
+  width:241px;
+  float:left;
+}
+.side-hd .node-item a{
+  background-color:#B4E3F2;
+}
+.side-hd .node-item a:hover{
+  background-color:#a5d7e7;
+}
+.side-hd .node-item .node-item-click{
+	background-color:#6fb3c9 !important;
+	color:#fff !important;
+}
+
+
+.add-host{float:right;}
+.add-host a{
+  display:block;
+  text-align:center;
+  width:30px;
+  height:30px;
+  background-color:#93D0E4;
+}
+.add-host a span{
+  color:#fff;
+  font:bold 34px/30px arial;
+}
+.add-host a:hover{
+  background-color:#7cbace;
+  
+}
+
+
+.side-bd{
+  padding:10px 5px 10px 10px;
+}
+.side-bd .node-list{
+  height:487px;
+  padding-right:5px;
+}
+
+.side-bd .node-item{margin-bottom:10px;}
+.side-bd .node-item:last-child{margin-bottom:0;}
+.side-bd .node-item a{padding-right:0;}
+.side-bd .node-item a .host-title{
+  float:left;
+  width:200px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.side-bd .node-item .extra{
+  float:right;
+  display:none;
+}
+.side-bd .node-item .extra span{
+  padding:0 10px;
+  float:left;
+  height:30px;
+}
+.side-bd .node-item .extra span:hover{ background-color:#cccdca; }
+.side-bd .node-item .extra-2 span:hover{ background:none; }
+
+.side-bd .node-item a:hover .extra-1{display:block;}
+.side-bd .node-item a:hover .extra-2{display:none;}
+
+.side-bd .node-item .node-item-dblclick:hover .extra-1{display:none;}
+.side-bd .node-item .node-item-dblclick .extra-2,
+.side-bd .node-item .node-item-dblclick:hover .extra-2{display:block;}
+
+/*==================== pop =================*/
+
+.pop-add-host .pop-content{}
+
+.pop-del-host .pop-content{padding:0 10px;}
+.pop-del-host .pop-content .ico-wrap{
+  background-color:#D9C37D;
+  display:inline-block;
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  text-align:center;
+  line-height:27px;
+  margin-right:10px;
+}
+
+
+/*==================== footer =================*/
+.copyright{margin-top:-2px;padding:0 2px;}
+

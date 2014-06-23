@@ -1,0 +1,51 @@
+//width:674, height:584
+
+//Tip: 教你如何快速切换两块注释
+//第1个对象上面注释的右边注释 放到 第2个对象上面注释的右边， 这样可来回切换 :D
+
+// 正式 package
+/* */
+{
+  "main": "index.html",
+  "name": "PHost",
+  "description": "PHost app of node-webkit",
+  "version": "0.1.0",
+  "keywords": [ "host", "node-webkit" ],
+  "window": {
+    "title": "PHost",
+    "icon": "images/favorite.png",
+    "toolbar": false,
+    "frame": true,
+    "position": "center",
+
+    "width": 674,
+    "min_width": 674,
+    "max_width": 674,
+    
+    "height": 584,
+    "min_height": 584,
+    "max_height": 584
+  }
+}
+/* */
+
+// 测试 package
+/* 
+{
+  "main": "index.html",
+  "name": "PHost",
+  "description": "PHost app of node-webkit",
+  "version": "0.1.0",
+  "keywords": [ "host", "node-webkit" ],
+  "window": {
+    "title": "PHost",
+    "icon": "images/favorite.png",
+    "toolbar": true,
+    "frame": true,
+    "position": "center",
+
+    "width": 674,
+    "height": 700
+  }
+}
+/* */
