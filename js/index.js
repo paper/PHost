@@ -301,6 +301,7 @@ $(function(){
 			keyboardEnter(function(){
 				return document.activeElement.id == "J-add-host-name";
 			}, function(){
+				console.log(111);
 				okBtnAction();
 			});
 			
@@ -451,6 +452,7 @@ $(function(){
 	
   //页面初始化
   function PHostInit(){
+		console.log( js(hostHash) );
 		var hostHashObj = hostHashOp.get();
 		
 		for(var key in hostHashObj){
