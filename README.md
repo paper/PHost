@@ -32,6 +32,9 @@ PHost - 利用 nodeWebkit 制作，方便host切换与调试的工具
 https://github.com/paper/PHost/issues
 
 ### changelog
-###### 0.1.0 beta
+###### 0.1.0
 1. 目前只针对window版本
 2. 目前只测试了win7，系统盘在C盘 （后续会修改代码，以适应不同的系统盘）
+
+###### 0.1.1
+1. 解决window版本换行问题 ``\n`` -> ``\r\n``
