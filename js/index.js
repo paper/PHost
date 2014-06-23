@@ -15,7 +15,7 @@ var hostHash = ls["hostHash"] ? ls["hostHash"] : js({ "0":"单击", "1": "双击
 var hostNamePrefix = "PHost-";
 
 ls[hostNamePrefix + "base-host"] = '#提交bug: https://github.com/paper/PHost/issues'+
-									'\n#说明：这个是基础 host。也就是说，即使你切换不同的host，都会包含这个里面的内容。';
+									'\r\n#说明：这个是基础 host。也就是说，即使你切换不同的host，都会包含这个里面的内容。';
 
 ls[hostNamePrefix + "0"] = "#单击：查看对应的host内容";
 ls[hostNamePrefix + "1"] = "#双击：把对应的host设置为系统host";
@@ -70,6 +70,9 @@ $(function(){
 		},
 		
 		set : function(id, data){
+      //if window
+      data = data.replace(/([^\r])(\n)/g,"$1\r\n");
+      
 			ls[hostNamePrefix + id] = data;
 		},
 		
@@ -218,7 +221,7 @@ $(function(){
 	}
 	
 	function writeHostIntoSys(data){
-		var d = hostContentOp.get("base-host") + "\n\n" + data;
+		var d = hostContentOp.get("base-host") + "\r\n\r\n" + data;
 		PHost.setSysHost( d );
 		return d;
 	}
