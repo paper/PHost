@@ -5,6 +5,8 @@ PHost - 利用 nodeWebkit 制作，方便host切换与调试的工具
 
 ![PHost preview](images/preview.jpg)
 
+**下载地址：** https://github.com/paper/blog/issues/5
+
 ### 设计方面
 - 界面和交互看起来简单，但其实在实现过程中，需要花很多的心血，一点都不比code时间少。
 - 用色尽量简洁，复杂的我也搞不出来 :(
